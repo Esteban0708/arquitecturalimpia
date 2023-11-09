@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProyectoWeb</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProyectoWeb.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg"> <!-- Agregar la clase bg-danger para el fondo rojo -->
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-3">
+                        <!-- Agregar clase mx-2 para el margen -->
+                        <a class="nav-link active" aria-current="page" asp-area="" asp-controller="Home" asp-action="Index" style="color: black;">Home</a>
+                    </li>
+                    <li class="nav-item dropdown mx-3">
+                        <!-- Agregar clase mx-2 para el margen -->
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                            Usuario
+                        </a>
+                        <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Crear">Crear Usuario</a></li>
+                                <li><a class="dropdown-item" href="@Url.Action("Historial", "Super")">Visualizar Usuario</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#" style="color: black;">Rol</a>
+                    </li>
+                    <li class="nav-item dropdown mx-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                            Agenda
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Crear Agenda</a></li>
+                            <li><a class="dropdown-item" href="#">Visualizar Agenda</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <!-- Agregar clase mx-2 para el margen -->
+                        <a class="nav-link" href="#" style="color: black;">Historial Citas</a>
+                    </li>
+                </ul>
+                <div class="nav-item dropdown ms-lg-2">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user"></i>   Usuario
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" asp-area="" asp-controller="Login" asp-action="Login">Cerrar Sesión</a>
+                        <a class="dropdown-item" asp-area="" asp-controller="Super" asp-action="Datos">Actualizar Información</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

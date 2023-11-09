@@ -1,0 +1,87 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+button  {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: rgb(118, 138, 167);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    button:hover {
+        background-color: rgb(230, 135, 219);
+    }
+.titulo {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    height: 50px;
+    width: 100px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    height: 50px;
+    width: 5px;
+}
+
+table {
+    width: 950px;
+    color: black;
+    font-size: 14px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center; /* Centra el contenido de las celdas */
+}
+
+thead {
+    background: #cac4cb;
+}
+
+th {
+    padding: 20px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px;
+    border: solid 1px rgb(181, 165, 177);
+}
+
+tbody tr:hover {
+    background: rgb(181, 165, 177);
+}
+
+.contenedor {
+    position: absolute;
+    left: 400%;
+    width: 1000px;
+    height: 450px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

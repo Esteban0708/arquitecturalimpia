@@ -1,0 +1,107 @@
+﻿@using LogicaNegocio.Modelos;
+@model LogicaNegocio.Modelos.Usuario;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/RegistroEstilo.css">
+    <script src="https://kit.fontawesome.com/ce023cb24b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <div class="contenedor_todo">
+            <div class="caja_trasera">
+                <div class="caja_trasera-login">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia sesión para entrar</p>
+                    <a id="registro" href="@Url.Action("Login", "Login")" class="link">Iniciar Sesión</a>
+                </div>
+            </div>
+            <div class="contenedor_login-registro">
+                @using (Html.BeginForm("Registro1", "Login", FormMethod.Post))
+                         {
+                    <form asp-controller="Login" asp-action="Registro1" method="post" class="formulario_registro" id="register">
+                    <h2>Registrarse</h2>
+                        <!-- Nuevo contenedor para la distribución en grid -->
+                   
+
+                        <div class="grid-container">
+                        @Html.TextBoxFor(m => m.Nombre, new { @class = "form-control", placeholder = "Nombres" })
+                        @Html.TextBoxFor(m => m.Apellido, new { @class = "form-control", placeholder = "Apellidos" })
+                        @Html.TextBoxFor(m => m.Correo, new { @class = "form-control", placeholder = "Correo electrónico" })
+                        @Html.TextBoxFor(m => m.Telefono, new { @class = "form-control", placeholder = "Telefono" })
+                        @Html.TextBoxFor(m => m.Contrasenia, new { @class = "form-control", placeholder = "Contraseña", type="password" })
+
+                            <select id="genero" name="Fkgenero">
+                                <option value="">Genero</option>
+                                @if (ViewBag.Generos != null)
+                                {
+                                    foreach (var genero in ViewBag.Generos as List<Genero>)
+                                    {
+                                        <option value="@genero.Id">@genero.Nombre</option>
+                                    }
+                                }
+                            </select>
+
+                        <select id="departamentos" name="Fkdepartamento">
+                            <option value="departamento">Departamento</option>
+                            @if(ViewBag.Departamentos != null)
+                                {
+                                    @foreach (var departamento in (List<Departamento>)ViewBag.Departamentos)
+                                    {
+                                        <option value="@departamento.Id">@departamento.nombre</option>
+                                    }
+                                }
+                             
+                        </select>
+
+                        <select id="municipios" name="FKmunicipio">
+                            <option value="municipio">Municipio</option>
+                                @if (ViewBag.Ciudad != null)
+                                {
+                                    @foreach (var ciudad in (List<Ciudad>)ViewBag.Ciudad)
+                                    {
+                                        <option value="@ciudad.Id">@ciudad.Nombre</option>
+                                        Console.WriteLine(@ciudad.Id);
+                                    }
+                                }
+                        </select>
+
+                        <select id="TipoDocumento" name="FkTipoDocumento">
+                            <option value="Tipo Documento">Tipo Documento</option>
+                                @if (ViewBag.Documento != null)
+                                {
+                                       @foreach (var documento in ViewBag.Documento as List<Documento>)
+                            {
+                                <option value="@documento.Id">@documento.tipo</option>
+                            }
+                                }
+                             
+                        </select>
+                        @Html.TextBoxFor(m => m.Nuip, new { @class = "form-control", placeholder = "Digite el Numero" })
+                    </div>
+                 
+                        @Html.HiddenFor(m => m.Ciudad.Id)
+                    
+                    <button class="boton-registrar">Registrarse</button>
+                   
+                </form>
+                }
+            </div>
+        </div>
+        <div class="volver">
+            <a href="@Url.Action("Principal", "Home")">Volver a Inicio<i class="fa-solid fa-house" id="icon"></i></a>
+
+        </div>
+    </main>
+    <script src="/js/DepartaMuni.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,107 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Registroestilo.css">
+    <script src="https://kit.fontawesome.com/ce023cb24b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <div class="contenedor_todo">
+            <div class="caja_trasera">
+                <div class="caja_trasera-login">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia sesión para entrar</p>
+                    <button id="btn_iniciarSesion">Iniciar Sesion</button>
+                </div>
+            </div>
+            <div class="contenedor_login-registro">
+                <form asp-controller="Login" asp-action="Registro" method="post" class="formulario_registro" id="register">
+                    <h2>Registrarse</h2>
+
+
+                    <div class="grid-container">
+                        <!-- Nuevo contenedor para la distribución en grid -->
+                        <input type="text" placeholder="Nombres" name="nombres" required>
+                        <input type="text" placeholder="Apellidos" name="apellidos" required>
+                        <input type="email" placeholder="Correo Electronico" name="correo">
+                        <input type="text" placeholder="Telefono" name="Telefono" required>
+                        <input type="password" placeholder="Contraseña" name="contrasenia" required>
+
+                        <select id="genero" name="Fkgenero">
+                            <option value="Genero">Genero</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">No binario</option>
+                            <option value="4">Prefiero no decirlo</option>
+                            <option value="5">Otro</option>
+                        </select>
+
+                        <select id="departamentos" name="Fkdepartamento">
+                            <option value="departamento">Departamento</option>
+                            <option value="1">Amazonas</option>
+                            <option value="2">Antioquia</option>
+                            <option value="3">Arauca</option>
+                            <option value="4">Atlántico</option>
+                            <option value="5">Bolívar</option>
+                            <option value="6">Boyacá</option>
+                            <option value="7">Caldas</option>
+                            <option value="8">Caquetá</option>
+                            <option value="9">Casanare</option>
+                            <option value="10">Cauca</option>
+                            <option value="11">Cesar</option>
+                            <option value="12">Chocó</option>
+                            <option value="13">Córdoba</option>
+                            <option value="14">Cundinamarca</option>
+                            <option value="15">Guainía</option>
+                            <option value="16">Guaviare</option>
+                            <option value="17">Huila</option>
+                            <option value="18">La Guajira</option>
+                            <option value="19">Magdalena</option>
+                            <option value="20">Meta</option>
+                            <option value="21">Nariño</option>
+                            <option value="22">Norte de Santander</option>
+                            <option value="23">Putumayo</option>
+                            <option value="24">Quindío</option>
+                            <option value="25">Risaralda</option>
+                            <option value="26">San Andrés y Providencia</option>
+                            <option value="27">Santander</option>
+                            <option value="28">Sucre</option>
+                            <option value="29">Tolima</option>
+                            <option value="30">Valle del Cauca</option>
+                            <option value="31">Vaupés</option>
+                            <option value="32">Vichada</option>
+                        </select>
+
+                        <select id="municipios" name="FKmunicipio">
+                            <option value="departamento">Municipio</option>
+                        </select>
+
+                        <select id="TipoDocumento" name="FkTipoDocumento">
+                            <option value="Tipo Documento">Tipo Documento</option>
+                            <option value="1">Cédula</option>
+                            <option value="2">Passaporte</option>
+                            <option value="3">Tarjeta de identidad</option>
+                        </select>
+
+                        <input type="number" placeholder="Digite el Numero" name="numero" required>
+                    </div>
+                    <button class="boton-registrar">Registrarse</button>
+                </form>
+      </div>
+        </div>
+        <div class="volver">
+            <a href="@Url.Action("Principal", "Home")">Volver a Inicio<i class="fa-solid fa-house" id="icon"></i></a>
+
+        </div>
+    </main>
+    <script src="/js/DepartaMuni.js"></script>
+    <script src="/js/verContraseña.js"></script>
+
+</body>
+</html>

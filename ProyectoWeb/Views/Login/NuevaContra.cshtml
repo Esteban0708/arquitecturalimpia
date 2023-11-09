@@ -1,0 +1,28 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nueva Contraseña</title>
+    <link rel="stylesheet" href="/css/NuevaContra.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Escribe una nueva contraseña</h1>
+        <p>Crea una contraseña nueva de seis caracteres como mínimo.</p>
+        <p>Una contraseña segura tiene una combinación de letras, números y signos de puntuación.</p>
+        <form asp-controller="Login" asp-action="GuardarContrasenia" method="post" id="formularioRecuperacion">
+            <input type="password" placeholder="Contraseña" name="contrasenia" id="contra">
+            <img src="/imagenes/ojo.png" alt="" class="icon" id="Eye">
+            <div class="botones">
+                <a href="iniciosesion.html#Login" class="link">Cancelar</a>
+                <button type="submit" id="enviarCodigo" class="link">continuar</button>
+            </div>
+        </form>
+    </div>
+    <script src="/js/verContraseña.js"></script>
+</body>
+</html>

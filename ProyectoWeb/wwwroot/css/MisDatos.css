@@ -1,0 +1,188 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #007BFF; /* Puedes cambiar a tu color preferido */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+.contenedorinfo {
+    position: absolute;
+    background: white;
+    border-radius: 25px;
+    z-index: -1;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 495px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+}
+
+    .contenedorinfo h1 {
+        padding: 15px;
+        text-align: center;
+    }
+
+.inputs {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto; /* 3 columnas de igual ancho y una cuarta de tamaño automático */
+    gap: 40px; /* Espaciado entre los elementos */
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+input {
+    width: 110%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: #f2f2f2e0;
+    font-size: 16px;
+    outline: none;
+    border-radius: 15px;
+}
+
+.inputs .field:nth-child(3) {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.inputs .field:nth-child(4) {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.inputs .field:nth-child(5) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.inputs .field:nth-child(6) {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.inputs .field:nth-child(7) { /* Tipo Documento */
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.inputs .field:nth-child(8) { /* Tipo Documento */
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.inputs .field:nth-child(9) { /* Tipo Documento */
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.inputs .field:nth-child(10) {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Estilos para el botón "Editar" */
+/* Estilos para el botón "Editar" */
+.btn-editar {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #007BFF; /* Puedes cambiar a tu color preferido */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .btn-editar:hover {
+        background-color: #011b37; /* Puedes cambiar a tu color preferido para el hover */
+    }
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    overflow-y: auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: 50%;
+    width: 60%; /* Ajusta según tus necesidades */
+    border-radius: 10px;
+}
+
+#modalInputContra {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+}
+
+.modal-buttons {
+    position: relative;
+    top: 120px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+    .modal-buttons .idModificacion {
+        /* Agrandar el botón */
+        padding: 10px 15px; /* espacio interno alrededor del texto */
+        font-size: 13px; /* tamaño de la letra */
+        /* Cambiar el estilo de la letra */
+        font-family: 'Arial', sans-serif; /* tipo de letra */
+        font-weight: bold; /* letra en negritas */
+        color: white; /* color de la letra */
+        background-color: #007BFF; /* color de fondo del botón */
+        border-radius: 5px; /* bordes redondeados */
+        border: none; /* quitar bordes por defecto */
+        cursor: pointer; /* el cursor se convierte en mano al pasar sobre el botón */
+        transition: background-color 0.3s; /* efecto de transición al pasar el ratón sobre el botón */
+    }
+
+        .modal-buttons .idModificacion:hover {
+            background-color: #032141;
+        }

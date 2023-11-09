@@ -1,0 +1,70 @@
+﻿@model LogicaNegocio.Modelos.Usuario;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/InicioSesion.css">
+    <script src="https://kit.fontawesome.com/ce023cb24b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <div class="contenedor_todo">
+            <div class="caja_trasera">
+                <div class="caja_trasera-registro">
+                    <h3>¿Aun no tienes una cuenta?</h3>
+                    <p>Registrate para que puedas ingresar</p>
+                    <a id="login" href="@Url.Action("Registro1", "Login")" class="link">Registrarse</a>
+                </div>
+            </div>
+                  <div class="contenedor_login-registro">
+                @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+                {
+                    <form asp-controller="Login" asp-action="Login" method="post" class="formulario_login" id="Login">
+                        <h2>Iniciar Sesión</h2>
+                        <div id="alerta" class="alerta-popup" style="display: none;">
+                            Usuario o contraseña incorrectos. Por favor, intenta nuevamente.
+                        </div>
+
+                        @Html.TextBoxFor(m => m.Correo, new { @class = "form-control", placeholder = "Correo electrónico" })
+
+
+                        <div class="container">
+                            @Html.TextBoxFor(m=>m.Contrasenia, new { @class = "form-control", type = "password", id = "contra", placeholder = "Introduce tu contraseña" })
+                            <img src="/imagenes/ojo.png" alt="" class="icon" id="Eye">
+                        </div>
+                        <a id="olvido" href="@Url.Action("OlvidoContrasenia", "Login")">¿Olvidó su contraseña?</a>
+                        <button id="bton_entrar">Entrar</button>
+                     
+                    </form>
+                }
+                </div>
+        </div>
+        <div class="volver">
+            <a href="@Url.Action("Principal", "Home")">Volver a Inicio<i class="fa-solid fa-house" id="icon"></i></a>
+        </div>
+    </main>
+  
+    <script src="/js/verContraseña.js"></script>
+    <script>
+        // Verificar si se debe mostrar la alerta
+        @if (TempData["MostrarAlerta"] != null && (bool)TempData["MostrarAlerta"])
+        {
+            <text>
+                document.getElementById('alerta').style.display = 'block';
+            setTimeout(function () {
+                document.getElementById('alerta').style.display = 'none';
+            }, 5000); // Ocultar la alerta después de 5 segundos (puedes ajustar el tiempo)
+            </text>
+        }
+    </script>
+
+</body>
+</html>
+

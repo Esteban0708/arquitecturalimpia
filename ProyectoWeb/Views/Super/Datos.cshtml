@@ -1,0 +1,87 @@
+﻿
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Datos</title>
+    <link rel="stylesheet" href="/css/MisDatos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="contenedorinfo">
+        <h1>Datos Personales</h1>
+        <div class="inputs">
+            <div class="field">
+                <label for="nombres">Nombres</label>
+                <input type="text" id="nombres" placeholder="Nombres" readonly />
+            </div>
+
+            <div class="field">
+                <label for="correo">Correo</label>
+                <input type="text" id="correo" placeholder="Correo" readonly />
+            </div>
+
+            <div class="field">
+                <label for="contraseña">Contraseña</label>
+                <input type="text" id="contraseña" placeholder="contraseña" readonly />
+                <button class="btn-editar" id="botonEditar">Editar</button>
+
+                <div class="modal" id="modalEdicionContra">
+                    <div class="modal-content">
+                        <h2>Editar Contraseña</h2>
+                        <input type="text" id="modalInputContra" placeholder="Nueva Contraseña" />
+                        <div class="modal-buttons">
+                            <button class="idModificacion" onclick="cerrarModal('modalEdicionContra')">Cancelar</button>
+                            <button class="idModificacion"> Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="telefono">Teléfono</label>
+                <input type="text" id="telefono" placeholder="Teléfono" readonly />
+            </div>
+
+            <div class="field">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos" placeholder="Apellidos" readonly />
+            </div>
+
+            <div class="field">
+                <label for="genero">Género</label>
+                <input type="text" id="genero" placeholder="Género" readonly />
+            </div>
+
+            <div class="field">
+                <label for="municipio">Municipio</label>
+                <input type="text" id="municipio" placeholder="Municipio" readonly />
+                <button class="btn-editar" id="btnEditarMunicipio">Editar</button>
+            </div>
+
+            <div class="field">
+                <label for="tipoDocumento">Tipo Documento</label>
+                <input type="text" id="tipoDocumento" placeholder="Tipo Documento" readonly />
+                <button class="btn-editar" id="btnEditarTipoDoc">Editar</button>
+            </div>
+
+            <div class="field">
+                <label for="numeroDocumento">Número Documento</label>
+                <input type="text" id="numeroDocumento" placeholder="Número Documento" readonly />
+            </div>
+
+            <div class="field">
+                <label for="departamento">Departamento</label>
+                <input type="text" id="departamento" placeholder="Departamento" readonly />
+                <button class="btn-editar" id="btnEditarDepartamento">Editar</button>
+            </div>
+        </div>
+    </div>
+    <script src="/js/menu.js"></script>
+
+</body>
+
+</html>
