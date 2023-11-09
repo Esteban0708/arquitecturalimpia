@@ -17,10 +17,6 @@ namespace ProyectoWeb.Controllers
         {
             return View();
         }
-        public IActionResult Crear()
-        {
-            return View(); 
-        }
         public IActionResult Registro1()
         {
             ManejadorDepartamento manejadorDepartamento = new ManejadorDepartamento();

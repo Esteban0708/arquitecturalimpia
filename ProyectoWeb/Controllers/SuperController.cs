@@ -13,7 +13,10 @@ namespace ProyectoWeb.Controllers
         { 
             return View(); 
         }
-      
+      public IActionResult CrearUsuario()
+        {
+            return View();
+        }
 
 
         public IActionResult Historial()
