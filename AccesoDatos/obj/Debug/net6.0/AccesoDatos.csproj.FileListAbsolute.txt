@@ -1,0 +1,12 @@
+C:\Users\USER\source\repos\ProyectoWeb\AccesoDatos\bin\Debug\net6.0\AccesoDatos.deps.json
+C:\Users\USER\source\repos\ProyectoWeb\AccesoDatos\bin\Debug\net6.0\AccesoDatos.dll
+C:\Users\USER\source\repos\ProyectoWeb\AccesoDatos\bin\Debug\net6.0\AccesoDatos.pdb
+C:\Users\USER\source\repos\ProyectoWeb\AccesoDatos\obj\Debug\net6.0\AccesoDatos.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\ProyectoWeb\AccesoDatos\obj\Debug\net6.0\AccesoDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\source\repos\ProyectoWeb\AccesoDatos\obj\Debug\net6.0\AccesoDatos.AssemblyInfoInputs.cache
+C:\Users\USER\source\repos\ProyectoWeb\AccesoDatos\obj\Debug\net6.0\AccesoDatos.AssemblyInfo.cs
+C:\Users\USER\source\repos\ProyectoWeb\AccesoDatos\obj\Debug\net6.0\AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\ProyectoWeb\AccesoDatos\obj\Debug\net6.0\AccesoDatos.dll
+C:\Users\USER\source\repos\ProyectoWeb\AccesoDatos\obj\Debug\net6.0\refint\AccesoDatos.dll
+C:\Users\USER\source\repos\ProyectoWeb\AccesoDatos\obj\Debug\net6.0\AccesoDatos.pdb
+C:\Users\USER\source\repos\ProyectoWeb\AccesoDatos\obj\Debug\net6.0\ref\AccesoDatos.dll
